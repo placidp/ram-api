@@ -1,0 +1,27 @@
+* {
+  font-family: 'Nunito', system-ui !important;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.characters-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
+
+  @media (max-width: 970px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 660px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.pagination {
+  margin-bottom: 40px;
+}
