@@ -13,7 +13,6 @@ Pros:
 ### As an extra challenge:
 
 - To work with data, use storage (Vuex, Redux, etc.)
-- Make custom field edit event
 - Subscribe to update the storage status
 - Add character search field by API (or local filter)
 
