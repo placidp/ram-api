@@ -1,4 +1,15 @@
 export declare global {
+  type ResponseQuery = {
+    data: {
+      info: MetaDetails
+      results: Character[]
+    }
+    meta: {
+      request: Request
+      response: Response
+    }
+  }
+
   type MetaDetails = {
     count: number
     next: string
