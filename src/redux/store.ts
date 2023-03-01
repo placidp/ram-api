@@ -5,16 +5,14 @@ import { setupListeners } from '@reduxjs/toolkit/query'
 import { locationsApi } from './apis/locations'
 import { filterReducer } from './slices/filter'
 
-const reducer = (state: any) => state
-
 export const store = configureStore({
-  reducer: {
-    [charactersApi.reducerPath]: charactersApi.reducer,
-    [locationsApi.reducerPath]: locationsApi.reducer,
-    filter: filterReducer,
-  },
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(charactersApi.middleware, locationsApi.middleware),
+	reducer: {
+		[charactersApi.reducerPath]: charactersApi.reducer,
+		[locationsApi.reducerPath]: locationsApi.reducer,
+		filter: filterReducer,
+	},
+	middleware: (getDefaultMiddleware) =>
+		getDefaultMiddleware().concat(charactersApi.middleware, locationsApi.middleware),
 })
 
 setupListeners(store.dispatch)
